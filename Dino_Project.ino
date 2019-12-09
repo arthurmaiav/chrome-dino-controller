@@ -26,7 +26,7 @@ void loop() {
   digitalWrite(trigPin, LOW);
 
   duration = pulseIn(echoPin, HIGH);
-   distance = (duration / 2) / 29.1;
+  distance = (duration / 2) / 29.1;
  
   if (distance < 50) {
     Keyboard.releaseAll();
@@ -40,7 +40,6 @@ void loop() {
 
     if(jumpCount%10 == 0){
         tone(buzzer, 261);
-        Serial.println(jumpCount);
     }
   }
 
